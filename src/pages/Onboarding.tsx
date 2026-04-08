@@ -75,7 +75,7 @@ const Onboarding = () => {
             onClick={() => setSelected(cls.id)}
             className={`flex flex-col items-center rounded-2xl border-2 p-4 transition-all duration-200 ${
               selected === cls.id
-                ? "border-primary bg-accent shadow-lg"
+                ? "border-primary bg-accent shadow-lg shadow-primary/20"
                 : "border-border bg-card hover:border-primary/30"
             }`}
           >
@@ -99,7 +99,7 @@ const Onboarding = () => {
         disabled={!selected}
         className={`mt-8 w-full max-w-sm rounded-2xl py-4 text-lg font-semibold transition-all duration-300 ${
           selected
-            ? "gradient-primary text-primary-foreground shadow-lg animate-pulse-glow"
+            ? "gradient-amber text-primary-foreground shadow-lg animate-pulse-glow"
             : "bg-muted text-muted-foreground"
         }`}
       >

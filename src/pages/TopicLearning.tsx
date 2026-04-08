@@ -19,7 +19,6 @@ const TopicLearning = () => {
 
   return (
     <div className="min-h-screen bg-background pb-8">
-      {/* Header */}
       <div className="sticky top-0 z-40 glass-card px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -32,7 +31,7 @@ const TopicLearning = () => {
             onClick={() => setBookmarked(!bookmarked)}
             className="rounded-full p-2 hover:bg-muted transition-colors"
           >
-            <Bookmark size={20} className={bookmarked ? "fill-secondary text-secondary" : "text-muted-foreground"} />
+            <Bookmark size={20} className={bookmarked ? "fill-primary text-primary" : "text-muted-foreground"} />
           </button>
         </div>
       </div>
@@ -42,7 +41,7 @@ const TopicLearning = () => {
         <motion.section
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="rounded-2xl border border-border/50 bg-card p-5 shadow-sm"
+          className="rounded-2xl border border-border/50 bg-card p-5"
         >
           <div className="mb-3 flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent">
@@ -50,7 +49,7 @@ const TopicLearning = () => {
             </div>
             <h2 className="font-bold text-foreground">ব্যাখ্যা</h2>
           </div>
-          <p className="text-sm leading-relaxed text-foreground/90">{topicContent.explanation}</p>
+          <p className="text-sm leading-relaxed text-foreground/85">{topicContent.explanation}</p>
         </motion.section>
 
         {/* Key Points */}
@@ -58,14 +57,14 @@ const TopicLearning = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="rounded-2xl border border-border/50 bg-card p-5 shadow-sm"
+          className="rounded-2xl border border-border/50 bg-card p-5"
         >
           <h2 className="mb-3 font-bold text-foreground">📌 মূল পয়েন্ট</h2>
           <div className="space-y-2.5">
             {topicContent.keyPoints.map((kp, i) => (
-              <div key={i} className="rounded-xl bg-accent/50 p-3">
+              <div key={i} className="rounded-xl bg-accent/50 p-3 border border-border/30">
                 <span className="text-xs font-semibold text-primary">{kp.label}</span>
-                <p className="mt-0.5 text-sm text-foreground/90">{kp.text}</p>
+                <p className="mt-0.5 text-sm text-foreground/85">{kp.text}</p>
               </div>
             ))}
           </div>
@@ -76,7 +75,7 @@ const TopicLearning = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="rounded-2xl border border-border/50 bg-card p-5 shadow-sm"
+          className="rounded-2xl border border-border/50 bg-card p-5"
         >
           <div className="mb-3 flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-amber">
@@ -85,7 +84,7 @@ const TopicLearning = () => {
             <h2 className="font-bold text-foreground">সৃজনশীল প্রশ্ন (CQ)</h2>
           </div>
           {topicContent.cqs.map((cq, i) => (
-            <p key={i} className="text-sm leading-relaxed text-foreground/90">{cq}</p>
+            <p key={i} className="text-sm leading-relaxed text-foreground/85">{cq}</p>
           ))}
         </motion.section>
 
@@ -94,7 +93,7 @@ const TopicLearning = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="rounded-2xl border border-border/50 bg-card p-5 shadow-sm"
+          className="rounded-2xl border border-border/50 bg-card p-5"
         >
           <div className="mb-4 flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent">
@@ -139,12 +138,12 @@ const TopicLearning = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="rounded-2xl border border-border/50 bg-card p-5 shadow-sm"
+          className="rounded-2xl border border-border/50 bg-card p-5"
         >
           <h2 className="mb-3 font-bold text-foreground">📝 সংক্ষিপ্ত প্রশ্ন</h2>
           <ol className="space-y-2">
             {topicContent.sqs.map((sq, i) => (
-              <li key={i} className="text-sm text-foreground/90 pl-1">
+              <li key={i} className="text-sm text-foreground/85 pl-1">
                 {i + 1}. {sq}
               </li>
             ))}
@@ -157,7 +156,7 @@ const TopicLearning = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           onClick={() => navigate(`/practice/${subjectId}/${chapterId}/${topicId}`)}
-          className="w-full flex items-center justify-center gap-2 rounded-2xl gradient-primary py-4 text-primary-foreground font-semibold text-base shadow-lg"
+          className="w-full flex items-center justify-center gap-2 rounded-2xl gradient-amber py-4 text-primary-foreground font-semibold text-base shadow-lg shadow-primary/20"
         >
           <Play size={20} />
           প্র্যাকটিস শুরু করো

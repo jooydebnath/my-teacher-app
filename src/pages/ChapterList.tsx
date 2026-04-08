@@ -11,7 +11,6 @@ const ChapterList = () => {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      {/* Header */}
       <div className="sticky top-0 z-40 glass-card px-4 py-3">
         <div className="flex items-center gap-3">
           <button onClick={() => navigate(-1)} className="rounded-full p-2 hover:bg-muted transition-colors">
@@ -24,7 +23,6 @@ const ChapterList = () => {
         </div>
       </div>
 
-      {/* Chapters */}
       <div className="px-4 py-4 space-y-3">
         {chapters.map((chapter, i) => (
           <motion.button
@@ -36,16 +34,14 @@ const ChapterList = () => {
             disabled={chapter.locked}
             className={`w-full rounded-2xl border p-4 text-left transition-all ${
               chapter.locked
-                ? "border-border bg-muted/50 opacity-60"
-                : "border-border/50 bg-card shadow-sm hover:shadow-md"
+                ? "border-border bg-muted/30 opacity-50"
+                : "border-border/50 bg-card hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
             }`}
           >
             <div className="flex items-start justify-between">
               <div className="flex-1">
                 <h3 className="font-semibold text-foreground text-sm">{chapter.title}</h3>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  {chapter.topicCount}টি টপিক
-                </p>
+                <p className="mt-1 text-xs text-muted-foreground">{chapter.topicCount}টি টপিক</p>
               </div>
               {chapter.locked ? (
                 <Lock size={18} className="text-muted-foreground" />
@@ -63,7 +59,7 @@ const ChapterList = () => {
                 </div>
                 <div className="h-1.5 w-full rounded-full bg-muted overflow-hidden">
                   <div
-                    className="h-full rounded-full gradient-primary transition-all duration-500"
+                    className="h-full rounded-full gradient-amber transition-all duration-500"
                     style={{ width: `${chapter.progress}%` }}
                   />
                 </div>
