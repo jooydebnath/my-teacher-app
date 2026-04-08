@@ -16,6 +16,11 @@ import Profile from "./pages/Profile.tsx";
 import Leaderboard from "./pages/Leaderboard.tsx";
 import Bookmarks from "./pages/Bookmarks.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import DashboardLayout from "./pages/dashboard/DashboardLayout.tsx";
+import DashboardOverview from "./pages/dashboard/DashboardOverview.tsx";
+import DashboardStudents from "./pages/dashboard/DashboardStudents.tsx";
+import DashboardContent from "./pages/dashboard/DashboardContent.tsx";
+import DashboardAnalytics from "./pages/dashboard/DashboardAnalytics.tsx";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +43,15 @@ const App = () => (
               <Route path="/profile" element={<Profile />} />
               <Route path="/leaderboard" element={<Leaderboard />} />
               <Route path="/bookmarks" element={<Bookmarks />} />
+
+              {/* Dashboard */}
+              <Route path="/dashboard" element={<DashboardLayout />}>
+                <Route index element={<DashboardOverview />} />
+                <Route path="students" element={<DashboardStudents />} />
+                <Route path="content" element={<DashboardContent />} />
+                <Route path="analytics" element={<DashboardAnalytics />} />
+              </Route>
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
