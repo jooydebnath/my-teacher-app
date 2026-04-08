@@ -10,36 +10,35 @@ const iconMap: Record<string, any> = {
 
 const colorMap: Record<string, string> = {
   "bangla": "from-emerald-500 to-emerald-600",
-  "english": "from-blue-500 to-blue-600",
-  "math": "from-amber-500 to-orange-500",
-  "science": "from-purple-500 to-purple-600",
-  "ict": "from-cyan-500 to-cyan-600",
-  "bgs": "from-rose-500 to-rose-600",
+  "english": "from-blue-400 to-blue-600",
+  "math": "from-amber-400 to-orange-500",
+  "science": "from-purple-400 to-purple-600",
+  "ict": "from-cyan-400 to-cyan-600",
+  "bgs": "from-rose-400 to-rose-600",
 };
 
 const SubjectSelection = () => {
   const navigate = useNavigate();
-  const selectedClass = localStorage.getItem("selectedClass") || "class-8";
 
   return (
     <div className="min-h-screen bg-background pb-24">
       {/* Header */}
-      <div className="gradient-primary px-6 pb-8 pt-10 rounded-b-[2rem]">
+      <div className="gradient-hero px-6 pb-8 pt-10 rounded-b-[2rem]">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-primary-foreground/70 text-sm">আসসালামু আলাইকুম 👋</p>
-            <h1 className="text-xl font-bold text-primary-foreground mt-0.5">শিক্ষার্থী</h1>
+            <p className="text-foreground/60 text-sm">আসসালামু আলাইকুম 👋</p>
+            <h1 className="text-xl font-bold text-foreground mt-0.5">শিক্ষার্থী</h1>
           </div>
-          <div className="flex items-center gap-2 rounded-full bg-primary-foreground/20 px-3 py-1.5">
-            <Flame size={16} className="text-secondary" />
-            <span className="text-sm font-semibold text-primary-foreground">১২ দিন</span>
+          <div className="flex items-center gap-2 rounded-full bg-primary/20 px-3 py-1.5 border border-primary/30">
+            <Flame size={16} className="text-primary" />
+            <span className="text-sm font-semibold text-primary">১২ দিন</span>
           </div>
         </div>
 
         {/* Class badge */}
-        <div className="mt-4 rounded-xl bg-primary-foreground/10 p-3 backdrop-blur-sm">
-          <p className="text-primary-foreground/80 text-xs">তোমার ক্লাস</p>
-          <p className="text-primary-foreground font-semibold">
+        <div className="mt-4 rounded-xl bg-foreground/5 p-3 border border-foreground/10">
+          <p className="text-foreground/50 text-xs">তোমার ক্লাস</p>
+          <p className="text-foreground font-semibold">
             ক্লাস ৮ — NCTB কারিকুলাম
           </p>
         </div>
@@ -59,10 +58,10 @@ const SubjectSelection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 onClick={() => navigate(`/chapters/${subject.id}`)}
-                className="relative overflow-hidden rounded-2xl bg-card p-4 text-left shadow-sm border border-border/50 hover:shadow-md transition-shadow"
+                className="relative overflow-hidden rounded-2xl bg-card p-4 text-left border border-border/50 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/10"
               >
                 <div className={`mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${gradient}`}>
-                  <Icon size={20} className="text-primary-foreground" />
+                  <Icon size={20} className="text-foreground" />
                 </div>
                 <h3 className="text-sm font-semibold text-foreground leading-tight">{subject.name}</h3>
                 <div className="mt-2">

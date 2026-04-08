@@ -61,9 +61,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        emerald: {
-          light: "hsl(var(--emerald-light))",
-        },
         amber: {
           DEFAULT: "hsl(var(--amber))",
           light: "hsl(var(--amber-light))",
@@ -100,8 +97,8 @@ export default {
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 0 0 hsl(160 60% 28% / 0.4)" },
-          "50%": { boxShadow: "0 0 0 12px hsl(160 60% 28% / 0)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 hsl(38 90% 55% / 0.4)" },
+          "50%": { boxShadow: "0 0 0 12px hsl(38 90% 55% / 0)" },
         },
       },
       animation: {
