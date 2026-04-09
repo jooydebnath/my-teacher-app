@@ -21,6 +21,10 @@ import DashboardOverview from "./pages/dashboard/DashboardOverview.tsx";
 import DashboardStudents from "./pages/dashboard/DashboardStudents.tsx";
 import DashboardContent from "./pages/dashboard/DashboardContent.tsx";
 import DashboardAnalytics from "./pages/dashboard/DashboardAnalytics.tsx";
+import DashboardLeaderboard from "./pages/dashboard/DashboardLeaderboard.tsx";
+import DashboardSubscriptions from "./pages/dashboard/DashboardSubscriptions.tsx";
+import DashboardReports from "./pages/dashboard/DashboardReports.tsx";
+import DashboardSettings from "./pages/dashboard/DashboardSettings.tsx";
 
 const queryClient = new QueryClient();
 
