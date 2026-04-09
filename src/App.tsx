@@ -21,6 +21,10 @@ import DashboardOverview from "./pages/dashboard/DashboardOverview.tsx";
 import DashboardStudents from "./pages/dashboard/DashboardStudents.tsx";
 import DashboardContent from "./pages/dashboard/DashboardContent.tsx";
 import DashboardAnalytics from "./pages/dashboard/DashboardAnalytics.tsx";
+import DashboardLeaderboard from "./pages/dashboard/DashboardLeaderboard.tsx";
+import DashboardSubscriptions from "./pages/dashboard/DashboardSubscriptions.tsx";
+import DashboardReports from "./pages/dashboard/DashboardReports.tsx";
+import DashboardSettings from "./pages/dashboard/DashboardSettings.tsx";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +54,10 @@ const App = () => (
                 <Route path="students" element={<DashboardStudents />} />
                 <Route path="content" element={<DashboardContent />} />
                 <Route path="analytics" element={<DashboardAnalytics />} />
+                <Route path="leaderboard" element={<DashboardLeaderboard />} />
+                <Route path="subscriptions" element={<DashboardSubscriptions />} />
+                <Route path="reports" element={<DashboardReports />} />
+                <Route path="settings" element={<DashboardSettings />} />
               </Route>
 
               <Route path="*" element={<NotFound />} />
