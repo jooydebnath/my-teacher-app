@@ -16,6 +16,10 @@ import Profile from "./pages/Profile.tsx";
 import Leaderboard from "./pages/Leaderboard.tsx";
 import Bookmarks from "./pages/Bookmarks.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Login from "./pages/Login.tsx";
+import Register from "./pages/Register.tsx";
+import OnboardingFlow from "./pages/OnboardingFlow.tsx";
+import DashboardLogin from "./pages/DashboardLogin.tsx";
 import DashboardLayout from "./pages/dashboard/DashboardLayout.tsx";
 import DashboardOverview from "./pages/dashboard/DashboardOverview.tsx";
 import DashboardStudents from "./pages/dashboard/DashboardStudents.tsx";
@@ -38,6 +42,13 @@ const App = () => (
           <ThemeLanguageToggle />
           <BrowserRouter>
             <Routes>
+              {/* Auth */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/onboarding" element={<OnboardingFlow />} />
+              <Route path="/dashboard-login" element={<DashboardLogin />} />
+
+              {/* App */}
               <Route path="/" element={<Index />} />
               <Route path="/subjects" element={<SubjectSelection />} />
               <Route path="/chapters/:subjectId" element={<ChapterList />} />
