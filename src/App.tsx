@@ -42,6 +42,13 @@ const App = () => (
           <ThemeLanguageToggle />
           <BrowserRouter>
             <Routes>
+              {/* Auth */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/onboarding" element={<OnboardingFlow />} />
+              <Route path="/dashboard-login" element={<DashboardLogin />} />
+
+              {/* App */}
               <Route path="/" element={<Index />} />
               <Route path="/subjects" element={<SubjectSelection />} />
               <Route path="/chapters/:subjectId" element={<ChapterList />} />
